@@ -1,0 +1,1012 @@
+/* algemeen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fecdc1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+}
+
+/* menubalk */
+.floating-menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f7dde2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.floating-menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  list-style: none;
+  padding: 5px 0; 
+}
+
+.floating-menu ul li {
+  position: relative;
+  margin: 0 15px;
+}
+
+.floating-menu ul li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em; 
+  padding: 4px 10px; 
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+.floating-menu ul li a:hover {
+  background-color: #ffe4e1;
+  color: black;
+}
+
+.floating-menu ul li .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  list-style: none;
+  padding: 10px 0;
+  background-color: #F7dde2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1001;
+}
+
+.floating-menu ul li:hover .dropdown,
+.floating-menu ul li .dropdown:hover {
+  display: block; 
+  pointer-events: auto;
+}
+
+.dropdown li {
+  margin: 0;
+}
+
+.dropdown li a {
+  display: block;
+  padding: 8px 20px;
+  color: black;
+  font-size: 1em;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown li a:hover {
+  background-color: #ffe4e1;
+}
+
+/* tekstblokken */
+section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.tekstblok1 {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 45px;
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.tekstblok2 {
+    background-color: white;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 85%;
+    max-width: 800px;
+    margin: 0 auto 30px auto; /* De '30px' zorgt voor de ruimte aan de onderkant */
+    text-align: left;
+}
+
+
+/* contactbalk */
+.contact-section {
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+  margin-top: 60px;
+}
+
+.contact-section h1 {
+  color: #d63384;
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.contact-section h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #f8bbd0;
+  margin: 15px auto 0;
+  border-radius: 2px;
+  position: center;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #d63384;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 2px solid #f8bbd0;
+  border-radius: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #d63384;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(214, 51, 132, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submit-btn {
+  background: #d63384;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+  align-self: flex-start;
+}
+
+.submit-btn:hover {
+  background: #c22574;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(214, 51, 132, 0.3);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.info-card {
+  background: #fff9fa;
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid #ffe4e1;
+}
+
+.info-card h3 {
+  color: #d63384;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.info-card p {
+  color: #666;
+  line-height: 1.8;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #d63384;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.social-icon:hover {
+  background: #fff0f5;
+  transform: translateX(5px);
+}
+
+
+/* Algemene reset en basisstijlen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fecdc1;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  min-height: 100%;
+}
+
+/* foto's */
+
+.menu-logo {
+  height: 40px; 
+  max-height: 100%; 
+  display: block; 
+  margin: -5px;
+}
+
+.floating-menu ul li img {
+  vertical-align: middle; 
+}
+
+.foto2 {
+  position: absolute; 
+  top: 40px;                
+  right: 20px;     
+  max-width: 30%;                  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  margin-right: 20%; 
+  margin-top: 172px; 
+}
+
+.foto3 {
+  position: absolute; 
+  top: 40px;                
+  right: 20px;     
+  max-width: 30%;                  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  margin-right: 3%; 
+  margin-top: 172px; 
+}
+
+/* aanpasbare regels */
+@media screen and (max-width: 768px) {
+  .floating-menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .floating-menu ul li {
+    margin: 10px 0;
+  }
+
+  .menu-logo {
+    height: 30px; 
+  }
+
+  .floating-menu ul li a {
+    font-size: 1em; 
+    padding: 6px 12px;
+  }
+
+  .dropdown {
+    position: relative;
+    top: 0;
+  }
+}
+
+.contact-bar {
+  background-color: #007acc; 
+  color: white; 
+  padding: 20px 10px; 
+  text-align: center; 
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); 
+  margin-top: 50px; 
+}
+
+.contact-container {
+  max-width: 800px; 
+  margin: 0 auto; 
+}
+
+.contact-list {
+  list-style: none; 
+  padding: 0;
+  margin: 10px 0;
+}
+
+.contact-list li {
+  margin: 5px 0; 
+}
+
+.contact-list a {
+  color: white; 
+  text-decoration: none; 
+  transition: color 0.3s; 
+}
+
+.contact-list a:hover {
+  color: #005f99; 
+}
+
+/* Contactformulier */
+.contact-form-container {
+  background-color: white;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.contact-form-container h1 {
+  color: #007acc;
+  margin-bottom: 15px;
+}
+
+.contact-form-container p {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  text-align: left;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007acc;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 122, 204, 0.5);
+}
+
+/* Verstuur knop */
+.contact-form button {
+  background-color: #007acc;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #005f99;
+}
+
+.footer-text {
+  position: fixed;   
+  bottom: 0;         
+  width: 100%;       
+  color: black;     
+  text-align: center; 
+  background-color: #f7dde2;
+  padding: 10px 0;    
+  font-family: Arial, sans-serif; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+
+.team-photo:hover {
+  transform: scale(1.02);
+}
+
+/* Winkelmandje */
+/* Hoofdinhoud stijlen */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #fecdc1;
+  max-width: 3000px;
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.main-content_1 {
+  flex: 1;
+  padding: 40px;
+  background-color: #fecdc1;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.about-section {
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+}
+
+
+.cart-section h1 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  color: #d63384;
+}
+
+.cart-section h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #f8bbd0;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.cart-section {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: -15px;
+  border-radius: 30px;
+  width: 100%;          
+}
+
+
+.cart-section h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #f8bbd0;
+  margin-top: 15px;
+  border-radius: 2px;
+}
+
+.cart-subtitle {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.order-summary, .customer-info {
+  margin-bottom: 40px;
+}
+
+.order-summary h2, .customer-info h2 {
+  color: #d63384;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.order-summary h2 span, .customer-info h2 span {
+  background: #d63384;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.cart-container {
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #fff9fa;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ffe4e1;
+}
+
+.cart-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-title {
+  color: #d63384;
+  margin-bottom: 5px;
+}
+
+.cart-item-price {
+  color: #666;
+  font-weight: 500;
+}
+
+.cart-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  border: 1px solid #f8bbd0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.quantity-btn {
+  background: #f8bbd0;
+  border: none;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #d63384;
+  font-weight: bold;
+}
+
+.quantity-input {
+  width: 40px;
+  text-align: center;
+  border: none;
+  background: #fff;
+}
+
+.remove-item {
+  color: #d63384;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.remove-item:hover {
+  transform: scale(1.2);
+}
+
+.remove-btn {
+  background: #fff;
+  color: #d63384;
+  border: 2px solid #f8bbd0;
+  padding: 8px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin-top: 18px;
+}
+
+.remove-btn:hover {
+  background: #f8bbd0;
+  color: white;
+  border-color: #d63384;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(214, 51, 132, 0.2);
+}
+
+.order-totals {
+  background: #fff9fa;
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid #ffe4e1;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #f8bbd0;
+}
+
+.total-row.grand-total {
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-bottom: none;
+  margin-top: 15px;
+}
+
+.price {
+  color: #d63384;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #d63384;
+  font-weight: 500;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #f8bbd0;
+  border-radius: 15px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  border-color: #d63384;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(214, 51, 132, 0.2);
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+.form-footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.disclaimer {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.btn-checkout {
+  background: #d63384;
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-checkout:hover {
+  background: #c22574;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(214, 51, 132, 0.3);
+}
+
+/* --- Verbeterde product-grid & kaarten (centraal, niet te breed) --- */
+.product-grid {
+  max-width: 980px;
+  margin: 40px auto;           /* centreert horizontaal */
+  padding: 0 20px;             /* kleine marge tot rand */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;       /* centreert inhoud per cel */
+}
+
+.product-card {
+  max-width: 300px;            /* voorkom dat kaarten te breed worden */
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  margin-top: 40px;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Sidebar / hamburger styling - consistent met site kleuren --- */
+/* Sidebar basis: verborgen op desktop, klaargezet voor mobiel */
+.sidebar {
+  display: none;              /* standaard niet tonen op desktop */
+  position: fixed;
+  top: 0;
+  left: -320px;               /* buiten beeld starten */
+  width: 280px;
+  height: 100%;
+  background-color: #f7dde2;
+  color: #222;
+  z-index: 1002;
+  padding-top: 80px;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.12);
+  transition: left 0.28s ease;
+  border-radius: 0 18px 18px 0;
+  overflow-y: auto;
+}
+
+/* zichtbaar wanneer actief (mobiel) */
+.sidebar.active {
+  left: 0;
+}
+
+/* close knop */
+.sidebar-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #d63384;         /*zelfde accentkleur als knoppen*/
+  color: #fff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+/* interne lijst */
+.sidebar ul {
+  list-style: none;
+  padding: 12px 18px;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 700;
+  display: block;
+  padding: 10px 12px;
+  border-radius: 10px;
+  transition: background 0.18s;
+}
+
+.sidebar ul li a:hover {
+  background: #fff9fa;
+}
+
+/* logo in sidebar */
+.sidebar .menu-logo {
+  display: block;
+  margin: 0 auto 8px;
+  height: 46px;
+  object-fit: contain;
+}
+
+/* dropdown binnen sidebar (mobiel) */
+.sidebar .dropdown {
+  padding-left: 12px;
+  margin-top: 6px;
+}
+
+.sidebar .dropdown li a {
+  font-weight: 600;
+  padding: 8px 12px;
+}
+
+/* overlay-gedrag: voorkom scroll achtergrond bij open */
+body.sidebar-open {
+  overflow: hidden;
+}
+
+/* Hamburger (blijft zoals eerder, ensure boven sidebar) */
+.hamburger {
+  display: none;
+  z-index: 1003;
+}
+
+/* Op kleine schermen: verberg floating-menu, toon hamburger en sidebar */
+@media (max-width: 992px) {
+  .floating-menu {
+    display: none !important;
+  }
+
+  .hamburger {
+    display: block !important;
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 1003;
+    background: #d63384;
+    color: #fff;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  }
+
+  .sidebar {
+    display: block;            /* sidebar beschikbaar op mobiel (off-canvas) */
+  }
+}
+
+/* Op grotere schermen: toon floating menu, verberg hamburger + sidebar */
+@media (min-width: 993px) {
+  .floating-menu {
+    display: block !important;
+  }
+
+  .hamburger {
+    display: none !important;
+  }
+
+  .sidebar {
+    display: none !important;
+    left: -320px; /* zorg dat hij buiten zicht blijft mocht display worden overschreven */
+  }
+}
+
+/* kleine aanpassing voor product-afbeeldingen */
+.product-image {
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.add-to-cart {
+  background: #d63384;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Container voor de home-indeling */
+.home-flex-container {
+    display: flex;
+    align-items: center; /* Verticaal centreren */
+    justify-content: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Zorgt dat het op hele kleine telefoons toch onder elkaar gaat voor leesbaarheid */
+}
+
+/* De wrapper voor de foto */
+.home-image-wrapper {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.responsive-team-photo {
+    width: 100%;
+    max-width: 400px; /* Maximale grootte van je logo/foto */
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* De tekstblok aanpassing */
+.tekstblok3 {
+    flex: 1.5; /* De tekst mag iets meer ruimte nemen dan de foto */
+    min-width: 300px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 35px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 0; /* Verwijder de negatieve margin-top */
+}
+
+/* Mobiele aanpassing */
+@media screen and (max-width: 768px) {
+    .home-flex-container {
+        flex-direction: column; /* Op mobiel foto boven, tekst onder */
+        text-align: center;
+    }
+}

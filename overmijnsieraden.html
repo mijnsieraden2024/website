@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over Ons - Mijn Sieraden</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <button id="hamburger" class="hamburger">☰</button>
+    <div id="overlay" class="overlay"></div>
+    
+    <aside id="sidebar" class="sidebar">
+        <button id="sidebar-close" class="sidebar-close">✕</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="overmijnsieraden.html">Over ons</a></li>
+            <li><a href="armbandjes.html">Armbandjes</a></li>
+            <li><a href="ringen.html">Ringen</a></li>
+            <li><a href="haarklem.html">Haarklem</a></li>
+            <li><a href="haarelastiekje.html">Haarelastiekje</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="mandje.html">Mandje</a></li>
+        </ul>
+    </aside>
+
+    <nav class="floating-menu">
+        <ul>
+            <li>
+                <a href="index.html">
+                  <img src="logo.png" alt="Home" class="menu-logo">
+                </a>
+            </li>
+            <li><a href="overmijnsieraden.html">Over ons</a></li>
+            <li>
+                <a href="#">Producten ▾</a>
+                <ul class="dropdown">
+                    <li><a href="armbandjes.html">Armbandjes</a></li>
+                    <li><a href="ringen.html">Ringen</a></li>
+                    <li><a href="haarklem.html">Haarklem</a></li>
+                    <li><a href="haarelastiekje.html">Haarelastiekje</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="mandje.html">Mandje</a></li>   
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="cart-section" style="margin: 50px auto; width: 90%; max-width: 1000px; text-align: center;">
+            <br>
+            <br>
+            <br>
+            <h1>Over Mijn Sieraden</h1>
+            <p class="cart-subtitle">Leer het verhaal achter onze handgemaakte collectie kennen</p>
+
+            <div style="height: 40px;"></div>
+
+            <div class="tekstblok2" style="margin-bottom: 30px;">
+                <h2>Welkom ✨</h2>
+                <p>Welkom bij Mijn Sieraden! Wij zijn gepassioneerd door alles wat met sieraden te maken heeft, en willen je graag de mooiste producten aanbieden met een persoonlijke touch.</p>
+            </div>
+
+            <div class="tekstblok2" style="margin-bottom: 30px;">
+                <h2>Onze missie 💖</h2>
+                <p>Onze missie is om producten te creëren die je hart verwarmen en je dagelijkse leven een beetje vrolijker maken. We geloven in kwaliteit, liefde voor detail en een vriendelijke service.</p>
+            </div>
+
+            <div class="tekstblok2" style="margin-bottom: 30px;">
+                <h2>Ons team 🤝</h2>
+                <p>Ons team bestaat uit enthousiaste mensen die elke dag met veel plezier aan onze collectie werken. We vinden het belangrijk dat jij je bij ons thuis voelt.</p>
+            </div>
+
+            <div class="tekstblok2" style="margin-bottom: 30px;">
+                <h2>Onze waarden 💎</h2>
+                <p>We staan voor eerlijke prijzen, goeie kwaliteit, goede klantenservice en persoonlijke aandacht. Elk product wordt met zorg gemaakt en verpakt.</p>
+            </div>
+
+            <div class="tekstblok2" style="margin-bottom: 30px;">
+                <h2>Ons verhaal 📖</h2>
+                <p>Begonnen in 2024 op social media, en nu dan hier de website! Verkopen en bestellen is nog nooit zo gemakkelijk geweest. Met een druk op de knop heb je besteld!</p>  
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-text">
+        &copy; 2026 - All rights reserved. | Mijn Sieraden 
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburgerBtn = document.getElementById('hamburger');
+        const sidebar = document.getElementById('sidebar');
+        const sidebarClose = document.getElementById('sidebar-close');
+        const overlay = document.getElementById('overlay');
+
+        function openSidebar() {
+            sidebar.classList.add('active');
+            if(overlay) overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSidebar() {
+            sidebar.classList.remove('active');
+            if(overlay) overlay.classList.remove('active');
+            document.body.style.overflow = ''; 
+        }
+
+        if (hamburgerBtn) hamburgerBtn.addEventListener('click', openSidebar);
+        if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
+        if (overlay) overlay.addEventListener('click', closeSidebar);
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Mijn Sieraden</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="hamburger" class="hamburger">☰</button>
+
+    <!-- Sidebar voor mobiel (off-canvas). Zelfde links als floating-menu -->
+    <aside class="sidebar" aria-hidden="true">
+      <button class="sidebar-close" aria-label="Sluit menu">✕</button>
+      <ul>
+        <li>
+          <a href="index.html">
+            <img src="logo.png" alt="Home" class="menu-logo">
+          </a>
+        </li>
+        <li><a href="overmijnsieraden.html">Over ons</a></li>
+        <li>
+          <a href="#">Producten ▾</a>
+          <ul class="dropdown">
+            <li><a href="armbandjes.html">Armbandjes</a></li>
+            <li><a href="ringen.html">Ringen</a></li>
+            <li><a href="haarklem.html">Haarklem</a></li>
+            <li><a href="haarelastiekje.html">Haarelastiekje</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="mandje.html">Mandje</a></li>
+      </ul>
+    </aside>
+
+    <nav class="floating-menu">
+        <ul>
+            <li>
+                <a href="index.html">
+                  <img src="logo.png" alt="Home" class="menu-logo">
+                </a>
+              </li>
+            <li><a href="overmijnsieraden.html">Over ons</a></li>
+            <li>
+                <a>Producten</a>
+                <ul class="dropdown">
+                    <li><a href="armbandjes.html">Armbandjes</a></li>
+                    <li><a href="ringen.html">Ringen</a></li>
+                    <li><a href="haarklem.html">Haarklem</a></li>
+                    <li><a href="haarelastiekje.html">Haarelastiekje</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="mandje.html">Mandje</a></li>   
+        </ul>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+    
+    <main class="main-content">
+      <section class="cart-section">
+        <br>
+        <br>
+        <h1>Jouw Bestelling</h1>
+        <p class="cart-subtitle">Controleer je bestelling en vul je gegevens in</p>
+
+        <div class="order-summary">
+          <h2><span>1</span> Jouw selectie</h2>
+          <div class="cart-container" id="cart-container">
+            <!-- Winkelmandje items worden hier geladen -->
+          </div>
+
+          <div class="order-totals">
+            <div class="total-row">
+              <span>Subtotaal:</span>
+              <span class="price" id="subtotal">€0,00</span>
+            </div>
+            <div class="total-row">
+              <span>*Verzendkosten:</span>
+              <span class="price" id="shipping">€1,21</span>
+            </div>
+            <div class="total-row grand-total">
+              <span>Totaal:</span>
+              <span class="price" id="total">€3,99</span>
+            </div>
+            <p>* Verzendkosten kunnen hoger worden door grote bestelling. Verzendkosten staan aangegeven in bestelbevestiging.</p>
+          </div>
+        </div>
+
+        <div class="customer-info">
+          <h2><span>2</span> Jouw gegevens</h2>
+          <form id="order-form" action="https://formspree.io/f/xovwdgvq" method="POST">
+            <input type="hidden" name="_subject" value="Nieuwe bestelling" />
+            <input type="hidden" name="_replyto" id="reply-email" />
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="voornaam">Voornaam *</label>
+                <input type="text" id="voornaam" name="voornaam" required />
+              </div>
+              <div class="form-group">
+                <label for="achternaam">Achternaam *</label>
+                <input type="text" id="achternaam" name="achternaam" required />
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="telefoon">Telefoonnummer *</label>
+                <input type="tel" id="telefoon" name="telefoon" required />
+              </div>
+              <div class="form-group full-width">
+                <label for="adres">Straat en huisnummer *</label>
+                <input type="text" id="adres" name="adres" required />
+              </div>
+              <div class="form-group">
+                <label for="postcode">Postcode *</label>
+                <input type="text" id="postcode" name="postcode" required />
+              </div>
+              <div class="form-group">
+                <label for="stad">Stad *</label>
+                <input type="text" id="stad" name="stad" required />
+              </div>
+              <div class="form-group full-width">
+                <label for="opmerkingen">Opmerkingen / Jouw bestelling</label>
+                <textarea id="opmerkingen" name="opmerkingen" rows="4"></textarea>
+              </div>
+            </div>
+
+            <div class="form-footer">
+              <p class="disclaimer">
+                Je ontvangt een bevestiging per e-mail. We nemen contact met je op voor de betalingsafhandeling.
+              </p>
+              <button type="submit" class="btn-checkout">Bestelling plaatsen</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+ <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartContainer = document.getElementById('cart-container');
+      const subtotalElement = document.getElementById('subtotal');
+      const shippingElement = document.getElementById('shipping');
+      const totalElement = document.getElementById('total');
+
+      function formatPrice(price) {
+        // Zorg dat price een getal is
+        const num = parseFloat(price);
+        return '€' + (isNaN(num) ? "0,00" : num.toFixed(2).replace('.', ','));
+      }
+
+      function renderCart() {
+        cartContainer.innerHTML = '';
+
+        if (cart.length === 0) {
+          cartContainer.innerHTML = '<p class="empty-cart">Je winkelmandje is leeg.</p>';
+          subtotalElement.textContent = '€0,00';
+          shippingElement.textContent = '€0,00';
+          totalElement.textContent = '€0,00';
+          return;
+        }
+
+        let subtotal = 0;
+
+        cart.forEach((item, index) => {
+          // Zorg dat we altijd een getal hebben voor de prijs, ook als het uit JSON komt
+          const price = parseFloat(item.price) || 0;
+          const quantity = item.quantity || 1;
+          const name = item.name || 'Product';
+          
+          subtotal += (price * quantity);
+
+          const itemDiv = document.createElement('div');
+          itemDiv.className = 'cart-item';
+          itemDiv.innerHTML = `
+            <div class="cart-item-details">
+              <h3>${name}</h3>
+              <p>Prijs: ${formatPrice(price)}</p>
+              <p>Aantal: ${quantity}</p>
+              <button class="remove-btn" data-index="${index}">Verwijder</button>
+            </div>
+          `;
+          cartContainer.appendChild(itemDiv);
+        });
+
+        // Verwijder-knopjes activeren
+        document.querySelectorAll('.remove-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            const index = e.target.dataset.index;
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+          });
+        });
+
+        const shipping = 1.21;
+        const total = subtotal + shipping;
+
+        subtotalElement.textContent = formatPrice(subtotal);
+        shippingElement.textContent = formatPrice(shipping);
+        totalElement.textContent = formatPrice(total);
+      }
+
+      // Winkelmandje meesturen met het Formspree formulier
+      const form = document.getElementById('order-form');
+      const opmerkingenField = document.getElementById('opmerkingen');
+
+      form.addEventListener('submit', (e) => {
+        let cartSummary = "BESTELLING OVERZICHT:\n";
+        cart.forEach(item => {
+            cartSummary += `- ${item.name}: €${parseFloat(item.price).toFixed(2)}\n`;
+        });
+        cartSummary += `\nTotaal inclusief verzendkosten: ${totalElement.textContent}`;
+        
+        // Plak het mandje in het opmerkingenveld zodat jij het in je mail krijgt
+        opmerkingenField.value = cartSummary + "\n\nBERICHT VAN KLANT:\n" + opmerkingenField.value;
+      });
+
+      renderCart();
+
+      // --- MENU LOGICA ---
+      const hamburgerBtn = document.getElementById('hamburger');
+      const sidebarEl = document.querySelector('.sidebar');
+      const sidebarClose = document.querySelector('.sidebar-close');
+
+      function openSidebar() {
+        sidebarEl.classList.add('active');
+        document.body.classList.add('sidebar-open');
+      }
+
+      function closeSidebar() {
+        sidebarEl.classList.remove('active');
+        document.body.classList.remove('sidebar-open');
+      }
+
+      if (hamburgerBtn) hamburgerBtn.addEventListener('click', openSidebar);
+      if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
+    });
+    const hamburgerBtn = document.getElementById('hamburger');
+const sidebarEl = document.getElementById('sidebar'); // Let op: ID, geen class
+const sidebarClose = document.getElementById('sidebar-close');
+const overlayEl = document.getElementById('overlay');
+
+function openSidebar() {
+    sidebarEl.classList.add('active');
+    if (overlayEl) overlayEl.classList.add('active');
+    document.body.style.overflow = 'hidden'; 
+}
+
+function closeSidebar() {
+    sidebarEl.classList.remove('active');
+    if (overlayEl) overlayEl.classList.remove('active');
+    document.body.style.overflow = ''; 
+}
+
+if (hamburgerBtn) hamburgerBtn.addEventListener('click', openSidebar);
+if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
+if (overlayEl) overlayEl.addEventListener('click', closeSidebar);
+</script>
+
+</body>
+</html>
