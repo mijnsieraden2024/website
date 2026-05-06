@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mijn Sieraden – Handgemaakte sieraden</title>
+  <link rel="icon" href="images/logopng.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="logo">
+        <img src="images/logopng.png" alt="Mijn Sieraden" onerror="this.style.display='none'; this.nextSibling.style.display='inline'" />
+        <span style="display:none">Mijn Sieraden</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#home" class="nav-link">Home</a>
+        <div class="dropdown">
+          <button class="nav-link dropdown-toggle">Collectie ▾</button>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a href="#shop" class="dropdown-item" data-filter="Alles">✦ Alles</a>
+            <!-- filled by JS -->
+          </div>
+        </div>
+        <a href="#over-ons" class="nav-link">Over ons</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+
+      <button class="cart-btn" id="cartBtn" aria-label="Winkelmandje">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#shop" class="mobile-link">Collectie</a>
+      <a href="#over-ons" class="mobile-link">Over ons</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-sub">Handgemaakt met liefde ✦ Est. 2024</p>
+      <h1 class="hero-title">Jouw sieraad,<br /><em>jouw verhaal</em></h1>
+      <p class="hero-desc">Betaalbare, handgemaakte armbandjes, ringen en haaraccessoires — voor elke gelegenheid.</p>
+      <a href="#shop" class="btn-primary">Bekijk de collectie</a>
+    </div>
+    <div class="hero-deco">
+      <div class="deco-ring r1"></div>
+      <div class="deco-ring r2"></div>
+      <div class="deco-ring r3"></div>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section class="section" id="shop">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Onze Collectie</h2>
+        <p class="section-sub">Alle prijzen zijn inclusief btw. Verzendkosten worden berekend bij afrekenen.</p>
+      </div>
+
+      <!-- Category filter tabs -->
+      <div class="filter-tabs" id="filterTabs">
+        <button class="filter-tab active" data-filter="Alles">Alles</button>
+        <!-- filled by JS -->
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <!-- filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- OVER ONS -->
+  <section class="section about-section" id="over-ons">
+    <div class="container about-container">
+      <div class="about-text">
+        <p class="about-label">Ons verhaal</p>
+        <h2 class="section-title">Mijn Sieraden</h2>
+        <p>Mijn Sieraden is in 2024 ontstaan vanuit een simpele passie: mooie, betaalbare sieraden maken die iedereen een goed gevoel geven. Elk stukje wordt met zorg en aandacht voor detail samengesteld.</p>
+        <p>Of je nu op zoek bent naar een schattig armbandje, een subtiele ring of een leuk haaraccessoire — bij ons vind je altijd iets dat bij jou past. Bestellen is eenvoudig: voeg toe aan je mandje, stuur je bestelling in en wij sturen je een tikkie. Zo simpel is het!</p>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-num">30+</span><span class="stat-label">producten</span></div>
+          <div class="stat"><span class="stat-num">4</span><span class="stat-label">categorieën</span></div>
+          <div class="stat"><span class="stat-num">2024</span><span class="stat-label">opgericht</span></div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="about-card">
+          <div class="about-icon">💍</div>
+          <h3>Handgemaakt</h3>
+          <p>Elk sieraad is met de hand gemaakt en uniek in zijn soort.</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">✦</div>
+          <h3>Betaalbaar</h3>
+          <p>Kwaliteit hoeft niet duur te zijn. Onze prijzen starten vanaf €1,–</p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">📦</div>
+          <h3>Eenvoudig bestellen</h3>
+          <p>Bestel via het mandje, ontvang een Tikkie — klaar!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container contact-container">
+      <div class="section-header">
+        <h2 class="section-title">Neem contact op</h2>
+        <p class="section-sub">Heb je een vraag of opmerking? We horen graag van je!</p>
+      </div>
+      <form class="contact-form" action="https://formspree.io/f/xldnbyyk" method="POST">
+        <input type="hidden" name="_subject" value="Contactbericht via Mijn Sieraden" />
+        <div class="form-row">
+          <div class="form-group">
+            <label>Naam</label>
+            <input type="text" name="naam" placeholder="Jouw naam" required />
+          </div>
+          <div class="form-group">
+            <label>E-mailadres</label>
+            <input type="email" name="email" placeholder="jouw@email.nl" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Onderwerp</label>
+          <select name="onderwerp" required>
+            <option value="">— Selecteer een onderwerp —</option>
+            <option value="bestelling">Vraag over mijn bestelling</option>
+            <option value="product">Vraag over een product</option>
+            <option value="samenwerking">Samenwerking</option>
+            <option value="anders">Anders</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Bericht</label>
+          <textarea name="bericht" rows="5" placeholder="Schrijf hier je bericht..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Bericht versturen ✦</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-logo">Mijn Sieraden</p>
+      <p class="footer-sub">Handgemaakt met ♥ · Est. 2024</p>
+      <div class="social-links">
+        <a href="https://www.tiktok.com/@mijn.sieraden?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener" class="social-btn" aria-label="TikTok">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+          TikTok
+        </a>
+        <a href="https://www.instagram.com/mijn_sieraden2024" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          Instagram
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61577171731627" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          Facebook
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Winkelmandje</h3>
+      <button class="cart-close" id="cartClose">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Je mandje is leeg.</p>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-line"><span>Subtotaal</span><span id="cartSubtotal">€0,00</span></div>
+      <div class="cart-line"><span>Verzendkosten</span><span id="cartShipping">€0,00</span></div>
+      <div class="cart-line cart-total-line"><strong>Totaal</strong><strong id="cartTotal">€0,00</strong></div>
+      <p class="shipping-note" id="shippingNote"></p>
+      <button class="btn-primary btn-full" id="checkoutBtn">Bestellen ✦</button>
+    </div>
+  </aside>
+
+  <!-- ORDER MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="orderModal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <h3>Bestelling afronden</h3>
+      <p class="modal-intro">Vul je gegevens in. We sturen je een Tikkie voor het totaalbedrag.</p>
+      <form id="orderForm" action="https://formspree.io/f/xovwdgvq" method="POST">
+        <input type="hidden" name="_subject" value="Nieuwe bestelling – Mijn Sieraden" />
+        <input type="hidden" name="bestelling_details" id="orderDetailsInput" />
+        <div class="form-row">
+          <div class="form-group">
+            <label>Naam</label>
+            <input type="text" name="naam" placeholder="Jouw naam" required />
+          </div>
+          <div class="form-group">
+            <label>E-mailadres</label>
+            <input type="email" name="email" placeholder="jouw@email.nl" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Telefoonnummer (optioneel)</label>
+          <input type="tel" name="telefoon" placeholder="+31 6 12345678" />
+        </div>
+        <div class="form-group">
+          <label>Opmerking (optioneel)</label>
+          <textarea name="opmerking" rows="2" placeholder="Bijv. kleur voorkeur, cadeau, etc."></textarea>
+        </div>
+        <div class="order-summary" id="modalSummary"></div>
+        <button type="submit" class="btn-primary btn-full">Bestelling plaatsen ✦</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

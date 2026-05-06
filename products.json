@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "naam": "Grabbelton armbandje",
+    "type": "Armbandje",
+    "prijs": 2.50,
+    "afbeelding": "images/404.jpg"
+  },
+  {
+    "id": 2,
+    "naam": "Beige wit hartje",
+    "type": "Armbandje",
+    "prijs": 2.50,
+    "afbeelding": "images/beige_wit_hartje.jpeg"
+  },
+  {
+    "id": 3,
+    "naam": "Blauw hartje",
+    "type": "Armbandje",
+    "prijs": 1.50,
+    "afbeelding": "images/blouw_hartje.jpeg"
+  },
+  {
+    "id": 4,
+    "naam": "Goud maan",
+    "type": "Armbandje",
+    "prijs": 2.50,
+    "afbeelding": "images/goud_man.jpeg"
+  },
+  {
+    "id": 5,
+    "naam": "Kerst",
+    "type": "Armbandje",
+    "prijs": 2.50,
+    "afbeelding": "images/kerst.jpeg"
+  },
+  {
+    "id": 6,
+    "naam": "Panter lint",
+    "type": "Armbandje",
+    "prijs": 2.00,
+    "afbeelding": "images/lint_panter.jpeg"
+  },
+  {
+    "id": 7,
+    "naam": "Roze lint",
+    "type": "Armbandje",
+    "prijs": 2.00,
+    "afbeelding": "images/lint_armband_roze.jpeg"
+  },
+  {
+    "id": 8,
+    "naam": "Paars goud",
+    "type": "Armbandje",
+    "prijs": 1.50,
+    "afbeelding": "images/paarsgoude.jpeg"
+  },
+  {
+    "id": 9,
+    "naam": "Rood goud",
+    "type": "Armbandje",
+    "prijs": 2.50,
+    "afbeelding": "images/roodgoud_wit.jpeg"
+  },
+  {
+    "id": 10,
+    "naam": "Roze geel",
+    "type": "Armbandje",
+    "prijs": 2.50,
+    "afbeelding": "images/roze_geel.jpeg"
+  },
+  {
+    "id": 11,
+    "naam": "Roze",
+    "type": "Armbandje",
+    "prijs": 1.50,
+    "afbeelding": "images/roze.jpeg"
+  },
+  {
+    "id": 12,
+    "naam": "Roze wit smiley",
+    "type": "Armbandje",
+    "prijs": 2.50,
+    "afbeelding": "images/rozewit_smiley.jpeg"
+  },
+  {
+    "id": 13,
+    "naam": "Lichtroze smiley",
+    "type": "Armbandje",
+    "prijs": 1.50,
+    "afbeelding": "images/smiley_lichtroze.jpeg"
+  },
+  {
+    "id": 14,
+    "naam": "Summer",
+    "type": "Armbandje",
+    "prijs": 2.50,
+    "afbeelding": "images/summer.jpeg"
+  },
+  {
+    "id": 15,
+    "naam": "Zilver bloem",
+    "type": "Armbandje",
+    "prijs": 2.50,
+    "afbeelding": "images/zilver_bloem.jpeg"
+  },
+  {
+    "id": 16,
+    "naam": "Zwart wit",
+    "type": "Armbandje",
+    "prijs": 2.50,
+    "afbeelding": "images/zwart_wit_armband.jpeg"
+  },
+  {
+    "id": 17,
+    "naam": "Wit",
+    "type": "Ringen",
+    "prijs": 1.50,
+    "afbeelding": "images/wit_ring.jpeg"
+  },
+  {
+    "id": 18,
+    "naam": "Kerst",
+    "type": "Ringen",
+    "prijs": 1.50,
+    "afbeelding": "images/kerst_ring.jpeg"
+  },
+  {
+    "id": 19,
+    "naam": "Goud roze",
+    "type": "Ringen",
+    "prijs": 1.50,
+    "afbeelding": "images/goudroze_ring.jpeg"
+  },
+  {
+    "id": 20,
+    "naam": "Goud wit",
+    "type": "Ringen",
+    "prijs": 1.50,
+    "afbeelding": "images/goudwit_ring.jpeg"
+  },
+  {
+    "id": 21,
+    "naam": "Donkerbruin",
+    "type": "Haarklem",
+    "prijs": 1.00,
+    "afbeelding": "images/haarklemdonkerbruin.jpeg"
+  },
+  {
+    "id": 22,
+    "naam": "Creme",
+    "type": "Haarklem",
+    "prijs": 1.00,
+    "afbeelding": "images/haarklemcreme.jpeg"
+  },
+  {
+    "id": 23,
+    "naam": "Bruin",
+    "type": "Haarklem",
+    "prijs": 1.00,
+    "afbeelding": "images/haarklembruin.jpeg"
+  },
+  {
+    "id": 24,
+    "naam": "Taupe",
+    "type": "Haarklem",
+    "prijs": 1.00,
+    "afbeelding": "images/haarklemtaupe.jpeg"
+  },
+  {
+    "id": 25,
+    "naam": "Zwart",
+    "type": "Haarklem",
+    "prijs": 1.00,
+    "afbeelding": "images/haarklemzwart.jpeg"
+  },
+  {
+    "id": 26,
+    "naam": "Lichtgroen",
+    "type": "Haarelastiekje",
+    "prijs": 1.50,
+    "afbeelding": "images/haarelastiekjes.jpg"
+  },
+  {
+    "id": 27,
+    "naam": "Grijs",
+    "type": "Haarelastiekje",
+    "prijs": 1.50,
+    "afbeelding": "images/haarelastiekjes.jpg"
+  },
+  {
+    "id": 28,
+    "naam": "Taupe",
+    "type": "Haarelastiekje",
+    "prijs": 1.50,
+    "afbeelding": "images/haarelastiekjes.jpg"
+  },
+  {
+    "id": 29,
+    "naam": "Rood zilver",
+    "type": "Haarelastiekje",
+    "prijs": 1.50,
+    "afbeelding": "images/haarelastiekjes.jpg"
+  },
+  {
+    "id": 30,
+    "naam": "Blauw zilver",
+    "type": "Haarelastiekje",
+    "prijs": 1.50,
+    "afbeelding": "images/haarelastiekjes.jpg"
+  }
+]
