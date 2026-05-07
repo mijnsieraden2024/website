@@ -3,14 +3,14 @@
     "id": 1,
     "naam": "Grabbelton armbandje",
     "type": "Armbandje",
-    "prijs": 2.50,
+    "prijs": 1.50,
     "afbeelding": "images/404.jpg"
   },
   {
     "id": 2,
     "naam": "Beige wit hartje",
     "type": "Armbandje",
-    "prijs": 2.50,
+    "prijs": 1.50,
     "afbeelding": "images/beige_wit_hartje.jpeg"
   },
   {
@@ -24,14 +24,14 @@
     "id": 4,
     "naam": "Goud maan",
     "type": "Armbandje",
-    "prijs": 2.50,
+    "prijs": 1.50,
     "afbeelding": "images/goud_man.jpeg"
   },
   {
     "id": 5,
     "naam": "Kerst",
     "type": "Armbandje",
-    "prijs": 2.50,
+    "prijs": 1.50,
     "afbeelding": "images/kerst.jpeg"
   },
   {
@@ -59,14 +59,14 @@
     "id": 9,
     "naam": "Rood goud",
     "type": "Armbandje",
-    "prijs": 2.50,
+    "prijs": 1.50,
     "afbeelding": "images/roodgoud_wit.jpeg"
   },
   {
     "id": 10,
     "naam": "Roze geel",
     "type": "Armbandje",
-    "prijs": 2.50,
+    "prijs": 1.50,
     "afbeelding": "images/roze_geel.jpeg"
   },
   {
@@ -80,7 +80,7 @@
     "id": 12,
     "naam": "Roze wit smiley",
     "type": "Armbandje",
-    "prijs": 2.50,
+    "prijs": 1.50,
     "afbeelding": "images/rozewit_smiley.jpeg"
   },
   {
@@ -94,49 +94,49 @@
     "id": 14,
     "naam": "Summer",
     "type": "Armbandje",
-    "prijs": 2.50,
+    "prijs": 1.50,
     "afbeelding": "images/summer.jpeg"
   },
   {
     "id": 15,
     "naam": "Zilver bloem",
     "type": "Armbandje",
-    "prijs": 2.50,
+    "prijs": 1.50,
     "afbeelding": "images/zilver_bloem.jpeg"
   },
   {
     "id": 16,
     "naam": "Zwart wit",
     "type": "Armbandje",
-    "prijs": 2.50,
+    "prijs": 1.50,
     "afbeelding": "images/zwart_wit_armband.jpeg"
   },
   {
     "id": 17,
     "naam": "Wit",
     "type": "Ringen",
-    "prijs": 1.50,
+    "prijs": 0.75,
     "afbeelding": "images/wit_ring.jpeg"
   },
   {
     "id": 18,
     "naam": "Kerst",
     "type": "Ringen",
-    "prijs": 1.50,
+    "prijs": 0.75,
     "afbeelding": "images/kerst_ring.jpeg"
   },
   {
     "id": 19,
     "naam": "Goud roze",
     "type": "Ringen",
-    "prijs": 1.50,
+    "prijs": 0.75,
     "afbeelding": "images/goudroze_ring.jpeg"
   },
   {
     "id": 20,
     "naam": "Goud wit",
     "type": "Ringen",
-    "prijs": 1.50,
+    "prijs": 0.75,
     "afbeelding": "images/goudwit_ring.jpeg"
   },
   {
